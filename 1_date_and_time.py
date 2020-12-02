@@ -19,9 +19,14 @@ def print_days():
     today = dt.today()
     yesterday = today - timedelta(days=1)
     a_month_ago = today - timedelta(days=30)
-    print(f"Yesterday: {yesterday.strftime('%d.%m.%Y')},"
-          f"\nToday: {today.strftime('%d.%m.%Y')},"
-          f"\n30 days ago: {a_month_ago.strftime('%d.%m.%Y')}")
+
+    today = today.strftime('%d.%m.%Y')
+    yesterday = yesterday.strftime('%d.%m.%Y')
+    a_month_ago = a_month_ago.strftime('%d.%m.%Y')
+
+    print(f"Yesterday: {yesterday},"
+          f"\nToday: {today},"
+          f"\n30 days ago: {a_month_ago}")
 
 
 def str_2_datetime(date_string):

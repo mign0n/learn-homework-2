@@ -19,8 +19,10 @@ def main():
     """
     with open('referat.txt', 'r', encoding='utf-8') as file:
         content = file.read()
-    print(f"Length of string: {len(content)}")
-    print(f"The number of words: {len(content.split())}")
+    string_length = len(content)
+    n_words = len(content.split())
+    print(f"Length of string: {string_length}")
+    print(f"The number of words: {n_words}")
     with open('referat2.txt', 'w', encoding='utf-8') as file:
         new_content = content.replace('.', '!')
         file.write(new_content)
